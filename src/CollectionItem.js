@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-const CollectionItem = ({ active, children, className, href, ...other }) => {
+const CollectionItem = ({ active, children, className, href,target, ...other }) => {
   let item = (
     <li {...other} className={cx('collection-item', className)}>
       {children}
@@ -14,6 +14,7 @@ const CollectionItem = ({ active, children, className, href, ...other }) => {
       <a
         {...other}
         href={href}
+        target={target}
         className={cx('collection-item', { active }, className)}
       >
         {children}
@@ -33,6 +34,7 @@ CollectionItem.propTypes = {
    * For more information refer to : https://materializecss.com/collections.html#links
    */
   href: PropTypes.string
+  target:PropTypes.string
 };
 
 export default CollectionItem;

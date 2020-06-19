@@ -7,6 +7,7 @@ export interface NavItemProps {
   onClick?: AnyFn;
   className?: string;
   children?: string;
+  isExternal?:boolean;
 }
 
 /**

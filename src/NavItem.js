@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {NavLink} from 'react-router-dom'
 
-const NavItem = ({ divider, ...props }) => {
+const NavItem = ({ divider,isExternal=true,href, ...props }) => {
   if (divider) return <li className="divider" />;
-  return <a {...props} />;
+  if (isExternal) return <a href {...props} />;
+  return <NavLink to={href} {...props} />
+  
 };
 
 NavItem.propTypes = {
@@ -13,6 +16,7 @@ NavItem.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   divider: PropTypes.bool,
   href: PropTypes.string,
+  isExternal:PropTypes.bool,
   /**
    * NavItem can have onClick. If it does have, href
    * will not be rendered

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+var lex={"racs":234}
 const CollectionItem = ({ active, children, className, href,target, ...other }) => {
   let item = (
     <li {...other} className={cx('collection-item', className)}>

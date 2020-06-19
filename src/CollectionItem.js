@@ -33,7 +33,7 @@ CollectionItem.propTypes = {
    * Default: false
    * For more information refer to : https://materializecss.com/collections.html#links
    */
-  href: PropTypes.string
+  href: PropTypes.string,
   target:PropTypes.string
 };
 
